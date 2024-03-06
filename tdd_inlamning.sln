@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd_inlamning", "tdd_inlamning\tdd_inlamning.csproj", "{D03B0F7F-1F0B-4710-96D0-EB4B6689BC37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time.Tests", "Time.Tests\Time.Tests.csproj", "{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D03B0F7F-1F0B-4710-96D0-EB4B6689BC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D03B0F7F-1F0B-4710-96D0-EB4B6689BC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D03B0F7F-1F0B-4710-96D0-EB4B6689BC37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
