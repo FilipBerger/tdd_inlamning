@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd_inlamning", "tdd_inlamning\tdd_inlamning.csproj", "{D03B0F7F-1F0B-4710-96D0-EB4B6689BC37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd_inlamning", "tdd_inlamning\tdd_inlamning.csproj", "{D03B0F7F-1F0B-4710-96D0-EB4B6689BC37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time.Tests", "Time.Tests\Time.Tests.csproj", "{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd_inlamning.tests", "Time.Tests\tdd_inlamning.tests.csproj", "{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
