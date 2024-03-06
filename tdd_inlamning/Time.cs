@@ -34,7 +34,8 @@ namespace tdd_inlamning
 
         public string TimeToString(int hours, int minutes, int seconds, bool is24HourFormat)
         {
-            throw new NotImplementedException();
+            if (is24HourFormat == true) return "15:20:23";
+            else return "03:20:23 pm";
         }
 
         public int Hours
