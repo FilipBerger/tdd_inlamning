@@ -32,6 +32,11 @@ namespace tdd_inlamning
             return isValid;
         }
 
+        public string To24HourString(int hoursInput, int minutesInput, int secondsInput)
+        {
+            throw new NotImplementedException();
+        }
+
         public int Hours
         {
             get { return hours; }

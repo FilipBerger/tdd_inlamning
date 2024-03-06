@@ -24,5 +24,26 @@ namespace tdd.inlamning.Tests
 
             Assert.Equal(response, expectedResponse);
         }
+
+        [Fact]
+        public void ReturnsTimeString24HourFormat_Test()
+        {
+            // Arrange
+            var time = new Time();
+
+            var secondsInput = 53;
+            var minutesInput = 30;
+            var hoursInput = 15;
+
+            var expectedResponse = "15:30:53";
+
+            // Act
+
+            var response = time.To24HourString(hoursInput, minutesInput, secondsInput);
+
+            // Assert
+
+            Assert.Equal(response, expectedResponse);
+        }
     }
 }
