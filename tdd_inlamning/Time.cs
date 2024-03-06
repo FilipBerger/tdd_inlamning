@@ -32,7 +32,7 @@ namespace tdd_inlamning
             return isValid;
         }
 
-        public string To24HourString(int hoursInput, int minutesInput, int secondsInput)
+        public string TimeToString(int hours, int minutes, int seconds, bool is24HourFormat)
         {
             throw new NotImplementedException();
         }
