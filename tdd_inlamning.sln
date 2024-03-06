@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd_inlamning", "tdd_inlamn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd_inlamning.tests", "Time.Tests\tdd_inlamning.tests.csproj", "{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd_inlamning.output", "SaabClock.Output\tdd_inlamning.output.csproj", "{FCC69ED2-6CAC-4B2B-94AF-5ED83D5C89AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC69ED2-6CAC-4B2B-94AF-5ED83D5C89AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC69ED2-6CAC-4B2B-94AF-5ED83D5C89AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC69ED2-6CAC-4B2B-94AF-5ED83D5C89AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC69ED2-6CAC-4B2B-94AF-5ED83D5C89AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
