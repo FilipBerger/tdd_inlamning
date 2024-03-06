@@ -4,26 +4,42 @@ namespace tdd.inlamning.Tests
 {
     public class SaabClockTests
     {
-        [Fact]
-        public void IsValidTime_Test()
+        [Theory]
+        [InlineData(12, 15, 30, true)]
+        [InlineData(25, 70, 65, false)]
+
+        public void IsValidTime_Test(int hours, int minutes, int seconds, bool expected)
         {
             // Arrange
-            var time = new Time();
-
-            var secondsInput = 53;
-            var minutesInput = 30;
-            var hoursInput = 15;
-
-            var expectedResponse = true;
+            var time = new Time(hours, minutes, seconds);
 
             // Act
-
-            var response = time.IsValid(hoursInput, minutesInput, secondsInput);
-
+            var result = time.IsValid(hours, minutes, seconds);
+            
             // Assert
-
-            Assert.Equal(response, expectedResponse);
+            Assert.Equal(result, expected);
         }
+
+        //[Fact]
+        //public void IsValidTime_Test()
+        //{
+        //    // Arrange
+        //    var time = new Time();
+
+        //    var secondsInput = 53;
+        //    var minutesInput = 30;
+        //    var hoursInput = 15;
+
+        //    var expectedResponse = true;
+
+        //    // Act
+
+        //    var response = time.IsValid(hoursInput, minutesInput, secondsInput);
+
+        //    // Assert
+
+        //    Assert.Equal(response, expectedResponse);
+        //}
 
         [Fact]
         public void ReturnsTimeString24HourFormat_Test()
