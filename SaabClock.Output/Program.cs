@@ -1,5 +1,7 @@
 ﻿using tdd_inlamning;
 
-var time = new Time(25, 30, 53);
+var time = new Time(00, 00, 00);
+
+time + 5;
 
 Console.WriteLine(time.ToString());
