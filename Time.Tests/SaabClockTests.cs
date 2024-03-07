@@ -14,7 +14,7 @@ namespace tdd.inlamning.Tests
             var time = new Time(hours, minutes, seconds);
 
             // Act
-            var result = time.IsValid(hours, minutes, seconds);
+            var result = time.IsValid();
             
             // Assert
             Assert.Equal(result, expected);
@@ -52,7 +52,7 @@ namespace tdd.inlamning.Tests
 
             // Act
 
-            string result = time.TimeToString(hours, minutes, seconds,is24HourFormat);
+            string result = time.TimeToString(is24HourFormat);
 
             // Assert
 

@@ -17,10 +17,10 @@ namespace tdd_inlamning
             this.hours = hours;
             this.minutes = minutes;
             this.seconds = seconds;
-            IsValid(hours, minutes, seconds);
+            IsValid();
         }
 
-        public bool IsValid(int hours, int minutes, int seconds)
+        public bool IsValid()
         {
             var isValid = false;
 
@@ -32,10 +32,17 @@ namespace tdd_inlamning
             return isValid;
         }
 
-        public string TimeToString(int hours, int minutes, int seconds, bool is24HourFormat)
+        public string TimeToString(bool is24HourFormat)
         {
-            if (is24HourFormat == true) return "15:20:23";
-            else return "03:20:23 pm";
+            if (is24HourFormat == true)
+               return $"{hours:D2}:{minutes:D2}:{seconds:D2}";
+            else
+            {
+                if (hours >= 13)
+                    return $"{(hours - 12):D2}:{minutes:D2}:{seconds:D2} pm";
+                else
+                    return $"{hours:D2}:{minutes:D2}:{seconds:D2} am";
+            }
         }
 
         public int Hours
