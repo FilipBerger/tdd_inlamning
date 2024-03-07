@@ -52,10 +52,26 @@ namespace tdd.inlamning.Tests
 
             // Act
 
-            string result = time.TimeToString(is24HourFormat);
+            var result = time.TimeToString(is24HourFormat);
 
             // Assert
 
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
+        [InlineData(11, 20, 23, true)]
+        [InlineData(15, 20, 23, false)]
+
+        public void ReturnsIsAm_Test(int hours, int minutes, int seconds, bool expected)
+        {
+            // Arrange
+            var time = new Time(hours, minutes, seconds);
+
+            // Act
+            var result = time.IsAm();
+
+            // Assert
             Assert.Equal(expected, result);
         }
     }

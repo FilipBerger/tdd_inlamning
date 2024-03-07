@@ -32,6 +32,8 @@ namespace tdd_inlamning
             return isValid;
         }
 
+
+
         public string TimeToString(bool is24HourFormat)
         {
             if (is24HourFormat == true)
@@ -43,6 +45,11 @@ namespace tdd_inlamning
                 else
                     return $"{hours:D2}:{minutes:D2}:{seconds:D2} am";
             }
+        }
+
+        public bool IsAm()
+        {
+            throw new NotImplementedException();
         }
 
         public int Hours
