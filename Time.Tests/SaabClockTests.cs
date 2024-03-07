@@ -43,7 +43,9 @@ namespace tdd.inlamning.Tests
 
         [Theory]
         [InlineData(15, 20, 23, true, "15:20:23")]
+        [InlineData(12, 00, 00, false, "12:00:00 pm")]
         [InlineData(15, 20, 23, false, "03:20:23 pm")]
+        [InlineData(00, 00, 00, false, "12:00:00 am")]
 
         public void ReturnsTimeToString_Test(int hours, int minutes, int seconds, bool is24HourFormat, string expected)
         {

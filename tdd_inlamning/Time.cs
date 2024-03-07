@@ -40,8 +40,12 @@ namespace tdd_inlamning
                return $"{hours:D2}:{minutes:D2}:{seconds:D2}";
             else
             {
-                if (hours >= 13)
+                if (hours == 12)
+                    return $"{hours:D2}:{minutes:D2}:{seconds:D2} pm";
+                else if (hours >= 13)
                     return $"{(hours - 12):D2}:{minutes:D2}:{seconds:D2} pm";
+                else if (hours == 0)
+                    return $"{(hours + 12):D2}:{minutes:D2}:{seconds:D2} am";
                 else
                     return $"{hours:D2}:{minutes:D2}:{seconds:D2} am";
             }
@@ -49,7 +53,10 @@ namespace tdd_inlamning
 
         public bool IsAm()
         {
-            throw new NotImplementedException();
+            if (hours < 12)
+                return true;
+            else
+                return false;
         }
 
         public int Hours
