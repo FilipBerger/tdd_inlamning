@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,9 +21,25 @@ namespace tdd_inlamning
             IsValid();
         }
 
-        public static Time operator+ (Time time, int seconds)
+        public static Time operator+ (Time time, int secondsToAdd)
         {
-            throw new NotImplementedException ();
+            time.seconds += secondsToAdd;
+            if (time.seconds > 59)
+            {
+                time.minutes += 1;
+                time.seconds -= 60;
+            }
+            if (time.minutes > 59)
+            {
+                time.hours += 1;
+                time.minutes -= 60;
+            }
+            if (time.hours > 23)
+            {
+                time.hours -= 24;
+            }
+
+            return time;
         }
 
         public bool IsValid()

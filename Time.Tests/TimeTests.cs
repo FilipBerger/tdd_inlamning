@@ -82,14 +82,14 @@ namespace tdd_inlamning.Tests
         [InlineData(0, 0, 0, 5, 0, 0, 5)] //Addition 
         [InlineData(0, 0, 55, 5, 0, 1, 0)]
 
-        public void AddOperator_Test(int hours, int minutes, int seconds, int secondsAdded, int hoursExpected, int minutesExpected, int secondsExpected)
+        public void AddOperator_Test(int hours, int minutes, int seconds, int secondsToAdd, int hoursExpected, int minutesExpected, int secondsExpected)
         {
             // Arrange
             var time = new Time(hours, minutes, seconds);
-            var timeExpected = new Time(hoursExpected, minutesExpected, secondsExpected);
+            // var timeExpected = new Time(hoursExpected, minutesExpected, secondsExpected);
 
             // Act
-            var timeActual = time + secondsAdded;
+            var timeActual = time + secondsToAdd;
             
             // Assert
             Assert.Equal(hoursExpected, timeActual.Hours);
