@@ -20,6 +20,11 @@ namespace tdd_inlamning
             IsValid();
         }
 
+        public static Time operator+ (Time time, int seconds)
+        {
+            throw new NotImplementedException ();
+        }
+
         public bool IsValid()
         {
             var isValid = false;
