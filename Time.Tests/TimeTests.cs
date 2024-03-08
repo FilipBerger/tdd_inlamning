@@ -1,8 +1,8 @@
 using tdd_inlamning;
 
-namespace tdd.inlamning.Tests
+namespace tdd_inlamning.Tests
 {
-    public class SaabClockTests
+    public class TimeTests
     {
         [Theory]
         [InlineData(12, 15, 30, true)]
