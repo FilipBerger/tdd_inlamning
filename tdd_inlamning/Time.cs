@@ -42,6 +42,11 @@ namespace tdd_inlamning
             return time;
         }
 
+        public static Time operator ++(Time time)
+        {
+            throw new NotImplementedException();
+        }
+
         public static Time operator- (Time time, int secondsToSubtract)
         {
             time.seconds -= secondsToSubtract;
