@@ -183,7 +183,24 @@ namespace tdd_inlamning
 
         public static bool operator >=(Time time1, Time time2)
         {
-            throw new NotImplementedException();
+            if (time1.hours == time2.hours &&
+                time1.minutes == time2.minutes &&
+                time1.seconds == time2.seconds)
+                return true;
+
+            if (time1.hours > time2.hours)
+                return true;
+
+            if (time1.hours == time2.hours &&
+                time1.minutes > time2.minutes)
+                return true;
+
+            if (time1.hours == time2.hours &&
+                time1.minutes == time2.minutes &&
+                time1.seconds > time2.seconds)
+                return true;
+
+            else return false;
         }
 
         public bool IsValid()
