@@ -165,6 +165,16 @@ namespace tdd_inlamning
             else return false;
         }
 
+        public static bool operator <=(Time time1, Time time2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static bool operator >=(Time time1, Time time2)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool IsValid()
         {
             var isValid = false;
