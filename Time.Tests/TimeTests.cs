@@ -257,5 +257,31 @@ namespace tdd_inlamning.Tests
             // Assert
             Assert.Equal(expected, result);
         }
+
+        [Theory]
+        [InlineData(0, 0, 10, 0, 0, 0, true)]
+        [InlineData(0, 10, 0, 10, 0, 0, false)]
+        [InlineData(1, 1, 1, 1, 1, 1, true)]
+
+        public void MoreThanOrEqualOperator_Test(int hours1, int minutes1, int seconds1, int hours2, int minutes2, int seconds2, bool expected)
+        {
+            // Arrange
+            var time1 = new Time(hours1, minutes1, seconds1);
+            var time2 = new Time(hours2, minutes2, seconds2);
+            bool result;
+
+            // Act
+            if (time1 >= time2)
+            {
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
     }
 }
