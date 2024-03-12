@@ -5,9 +5,9 @@ VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd_inlamning", "tdd_inlamning\tdd_inlamning.csproj", "{D03B0F7F-1F0B-4710-96D0-EB4B6689BC37}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd_inlamning.tests", "Time.Tests\tdd_inlamning.tests.csproj", "{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd_inlamning.tests", "tdd_inlamning.tests\tdd_inlamning.tests.csproj", "{EE11CD03-173B-43F9-88D5-FA0B36A7F7D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd_inlamning.output", "SaabClock.Output\tdd_inlamning.output.csproj", "{FCC69ED2-6CAC-4B2B-94AF-5ED83D5C89AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd_inlamning.output", "tdd_inlamning.output\tdd_inlamning.output.csproj", "{FCC69ED2-6CAC-4B2B-94AF-5ED83D5C89AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
