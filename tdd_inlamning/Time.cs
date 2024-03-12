@@ -223,8 +223,6 @@ namespace tdd_inlamning
             return isValid;
         }
 
-
-
         public string TimeToString(bool is24HourFormat)
         {
             if (is24HourFormat == true)
@@ -266,6 +264,26 @@ namespace tdd_inlamning
         {
             get { return seconds; }
             set { seconds = value; }
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (ReferenceEquals(obj, null))
+            {
+                return false;
+            }
+
+            throw new NotImplementedException();
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
         }
     }
 }
