@@ -112,5 +112,24 @@ namespace tdd_inlamning.Tests
             Assert.Equal(minutesExpected, timeActual.Minutes);
             Assert.Equal(secondsExpected, timeActual.Seconds);
         }
+
+        [Theory]
+        [InlineData(0, 0, 1, 0, 0, 0)]
+        [InlineData(0, 1, 0, 0, 0, 59)]
+        [InlineData(0, 0, 0, 23, 59, 59)]
+
+        public void DecrementOperator_Test(int hours, int minutes, int seconds, int hoursExpected, int minutesExpected, int secondsExpected)
+        {
+            // Arrange
+            var time = new Time(hours, minutes, seconds);
+
+            // Act
+            var timeActual = time--;
+
+            // Assert
+            Assert.Equal(hoursExpected, timeActual.Hours);
+            Assert.Equal(minutesExpected, timeActual.Minutes);
+            Assert.Equal(secondsExpected, timeActual.Seconds);
+        }
     }
 }

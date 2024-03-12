@@ -84,6 +84,11 @@ namespace tdd_inlamning
             return time;
         }
 
+        public static Time operator --(Time time)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool IsValid()
         {
             var isValid = false;
