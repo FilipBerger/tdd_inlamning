@@ -86,7 +86,23 @@ namespace tdd_inlamning
 
         public static Time operator --(Time time)
         {
-            throw new NotImplementedException();
+            time.seconds -= 1;
+            if (time.seconds < 0)
+            {
+                time.minutes -= 1;
+                time.seconds += 60;
+            }
+            if (time.minutes < 0)
+            {
+                time.hours -= 1;
+                time.minutes += 60;
+            }
+            if (time.hours < 0)
+            {
+                time.hours += 24;
+            }
+
+            return time;
         }
 
         public bool IsValid()
