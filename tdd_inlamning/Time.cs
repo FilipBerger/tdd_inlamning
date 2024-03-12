@@ -9,6 +9,14 @@ namespace tdd_inlamning
 {
     public class Time
     {
+        private const int MAX_SECONDS = 59;
+        private const int MIN_SECONDS = 0;
+        private const int MAX_MINUTES = 59;
+        private const int MIN_MINUTES = 0;
+        private const int MAX_HOURS = 23;
+        private const int MIN_HOURS = 0;
+        private const int AM_CUT_OFF = 12;
+
         private int hours;
         private int minutes;
         private int seconds;
@@ -24,17 +32,17 @@ namespace tdd_inlamning
         public static Time operator+ (Time time, int secondsToAdd)
         {
             time.seconds += secondsToAdd;
-            if (time.seconds > 59)
+            if (time.seconds > MAX_SECONDS)
             {
                 time.minutes += 1;
                 time.seconds -= 60;
             }
-            if (time.minutes > 59)
+            if (time.minutes > MAX_MINUTES)
             {
                 time.hours += 1;
                 time.minutes -= 60;
             }
-            if (time.hours > 23)
+            if (time.hours > MAX_HOURS)
             {
                 time.hours -= 24;
             }
@@ -45,17 +53,17 @@ namespace tdd_inlamning
         public static Time operator ++(Time time)
         {
             time.seconds += 1;
-            if (time.seconds > 59)
+            if (time.seconds > MAX_SECONDS)
             {
                 time.minutes += 1;
                 time.seconds -= 60;
             }
-            if (time.minutes > 59)
+            if (time.minutes > MAX_MINUTES)
             {
                 time.hours += 1;
                 time.minutes -= 60;
             }
-            if (time.hours > 23)
+            if (time.hours > MAX_HOURS)
             {
                 time.hours -= 24;
             }
@@ -66,17 +74,17 @@ namespace tdd_inlamning
         public static Time operator- (Time time, int secondsToSubtract)
         {
             time.seconds -= secondsToSubtract;
-            if (time.seconds < 0)
+            if (time.seconds < MIN_SECONDS)
             {
                 time.minutes -= 1;
                 time.seconds += 60;
             }
-            if (time.minutes < 0)
+            if (time.minutes < MIN_MINUTES)
             {
                 time.hours -= 1;
                 time.minutes += 60;
             }
-            if (time.hours < 0)
+            if (time.hours < MIN_HOURS)
             {
                 time.hours += 24;
             }
@@ -87,17 +95,17 @@ namespace tdd_inlamning
         public static Time operator --(Time time)
         {
             time.seconds -= 1;
-            if (time.seconds < 0)
+            if (time.seconds < MIN_SECONDS)
             {
                 time.minutes -= 1;
                 time.seconds += 60;
             }
-            if (time.minutes < 0)
+            if (time.minutes < MIN_MINUTES)
             {
                 time.hours -= 1;
                 time.minutes += 60;
             }
-            if (time.hours < 0)
+            if (time.hours < MIN_HOURS)
             {
                 time.hours += 24;
             }
@@ -207,9 +215,9 @@ namespace tdd_inlamning
         {
             var isValid = false;
 
-            if (hours >= 0 && hours <= 23
-                && minutes >= 0 && minutes <= 59
-                && seconds >= 0 && seconds <= 59)
+            if (hours >= MIN_HOURS && hours <= MAX_HOURS
+                && minutes >= MIN_MINUTES && minutes <= MAX_MINUTES
+                && seconds >= MIN_SECONDS && seconds <= MAX_SECONDS)
                 isValid = true;
 
             return isValid;
@@ -236,7 +244,7 @@ namespace tdd_inlamning
 
         public bool IsAm()
         {
-            if (hours < 12)
+            if (hours < AM_CUT_OFF)
                 return true;
             else
                 return false;
