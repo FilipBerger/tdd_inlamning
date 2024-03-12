@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace tdd_inlamning
 {
-    public struct Time
+    public class Time
     {
         private int hours;
         private int minutes;
@@ -44,7 +44,23 @@ namespace tdd_inlamning
 
         public static Time operator ++(Time time)
         {
-            throw new NotImplementedException();
+            time.seconds += 1;
+            if (time.seconds > 59)
+            {
+                time.minutes += 1;
+                time.seconds -= 60;
+            }
+            if (time.minutes > 59)
+            {
+                time.hours += 1;
+                time.minutes -= 60;
+            }
+            if (time.hours > 23)
+            {
+                time.hours -= 24;
+            }
+
+            return time;
         }
 
         public static Time operator- (Time time, int secondsToSubtract)
