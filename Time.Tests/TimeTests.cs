@@ -20,27 +20,6 @@ namespace tdd_inlamning.Tests
             Assert.Equal(result, expected);
         }
 
-        //[Fact]
-        //public void IsValidTime_Test()
-        //{
-        //    // Arrange
-        //    var time = new Time();
-
-        //    var secondsInput = 53;
-        //    var minutesInput = 30;
-        //    var hoursInput = 15;
-
-        //    var expectedResponse = true;
-
-        //    // Act
-
-        //    var response = time.IsValid(hoursInput, minutesInput, secondsInput);
-
-        //    // Assert
-
-        //    Assert.Equal(response, expectedResponse);
-        //}
-
         [Theory]
         [InlineData(15, 20, 23, true, "15:20:23")]
         [InlineData(12, 0, 0, false, "12:00:00 pm")]
@@ -97,9 +76,9 @@ namespace tdd_inlamning.Tests
         }
 
         [Theory]
-        [InlineData(0, 0, 10, -5, 0, 0, 5)] //Subtraktion
-        [InlineData(0, 1, 0, -5, 0, 0, 55)]
-        [InlineData(0, 0, 0, -5, 23, 59, 55)]
+        [InlineData(0, 0, 10, 5, 0, 0, 5)] //Subtraktion
+        [InlineData(0, 1, 0, 5, 0, 0, 55)]
+        [InlineData(0, 0, 0, 5, 23, 59, 55)]
 
         public void SubOperator_Test(int hours, int minutes, int seconds, int secondsToSubtract, int hoursExpected, int minutesExpected, int secondsExpected)
         {
