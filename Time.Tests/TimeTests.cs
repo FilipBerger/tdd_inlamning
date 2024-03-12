@@ -77,16 +77,15 @@ namespace tdd_inlamning.Tests
             Assert.Equal(expected, result);
         }
 
-        // How is this test supposed to be implemented???
         [Theory]
-        [InlineData(0, 0, 0, 5, 0, 0, 5)] //Addition 
+        [InlineData(0, 0, 0, 5, 0, 0, 5)]
         [InlineData(0, 0, 55, 5, 0, 1, 0)]
+        [InlineData(23, 59, 55, 5, 0, 0, 0)]
 
         public void AddOperator_Test(int hours, int minutes, int seconds, int secondsToAdd, int hoursExpected, int minutesExpected, int secondsExpected)
         {
             // Arrange
             var time = new Time(hours, minutes, seconds);
-            // var timeExpected = new Time(hoursExpected, minutesExpected, secondsExpected);
 
             // Act
             var timeActual = time + secondsToAdd;
@@ -97,11 +96,23 @@ namespace tdd_inlamning.Tests
             Assert.Equal(secondsExpected, timeActual.Seconds);
         }
 
-        //[Theory]
-        //[InlineData(0, 0, 10, -5, 0, 0, 5)] //Subtraktion
-        //[InlineData(0, 0, 0, -5, 23, 59, 55)]
-        //public void SubOperator_Test(int hours, int minutes, int seconds, int secondsSubtracted, int hoursExpected, int minutesExpected, int secondsExpected) 
-        //{ 
-        //}
+        [Theory]
+        [InlineData(0, 0, 10, -5, 0, 0, 5)] //Subtraktion
+        [InlineData(0, 1, 0, -5, 0, 0, 55)]
+        [InlineData(0, 0, 0, -5, 23, 59, 55)]
+
+        public void SubOperator_Test(int hours, int minutes, int seconds, int secondsToSubtract, int hoursExpected, int minutesExpected, int secondsExpected)
+        {
+            // Arrange
+            var time = new Time(hours, minutes, seconds);
+
+            // Act
+            var timeActual = time - secondsToSubtract;
+
+            // Assert
+            Assert.Equal(hoursExpected, timeActual.Hours);
+            Assert.Equal(minutesExpected, timeActual.Minutes);
+            Assert.Equal(secondsExpected, timeActual.Seconds);
+        }
     }
 }

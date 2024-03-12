@@ -42,6 +42,11 @@ namespace tdd_inlamning
             return time;
         }
 
+        public static Time operator- (Time time, int secondsToSubtract)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool IsValid()
         {
             var isValid = false;
